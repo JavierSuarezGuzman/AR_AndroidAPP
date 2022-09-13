@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /* Javier Suárez Guzmán
+        Septiembre 2022 */ -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginTitle"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        />
+
+    <EditText
+        android:id="@+id/loginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:textSize="28sp"
+        />
+
+    <EditText
+        android:id="@+id/loginPass"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:textSize="28sp"
+        />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textSize="20sp"
+        android:text="@string/loginButton"
+        />
+    <Button
+        android:id="@+id/loginToRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textSize="20sp"
+        android:text="@string/registerButton"
+        />
+
+</LinearLayout>

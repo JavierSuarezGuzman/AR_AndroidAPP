@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /* Javier Suárez Guzmán
+        Septiembre 2022 */ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registerTitle"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        />
+
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:textSize="28sp"
+        />
+
+    <EditText
+        android:id="@+id/registerPass"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:textSize="28sp"
+        />
+
+    <EditText
+        android:id="@+id/registerPassRep"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/registerPassword"
+        android:inputType="textPassword"
+        android:textSize="28sp"
+        />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textSize="20sp"
+        android:text="@string/registerButton"
+        />
+    <Button
+        android:id="@+id/registerToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textSize="20sp"
+        android:text="@string/registerToLoginButton"
+        />
+
+</LinearLayout>

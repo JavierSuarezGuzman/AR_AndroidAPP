@@ -1,0 +1,19 @@
+<!-- /* Javier Suárez Guzmán
+        Septiembre 2022 */ -->
+
+<resources>
+    <string name="app_name">AndroidKotlin</string>
+
+    <string name="Email">Correo electrónico </string>
+    <string name="Password">Contraseña </string>
+
+    <string name="loginTitle">Iniciar sesión</string>
+    <string name="loginButton">Ingresar </string>
+
+    <string name="registerTitle">Registrarse</string>
+    <string name="registerPassword">Repetir Contraseña </string>
+    <string name="registerButton">Registrarme </string>
+    <string name="registerToLoginButton">Ya tengo cuenta </string>
+</resources><!--
+    <string name=""> </string>
+    -->
