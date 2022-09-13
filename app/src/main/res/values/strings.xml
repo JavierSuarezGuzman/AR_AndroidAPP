@@ -2,7 +2,7 @@
         Septiembre 2022 */ -->
 
 <resources>
-    <string name="app_name">AndroidKotlin</string>
+    <string name="app_name">droid Kotlin</string>
 
     <string name="Email">Correo electrónico </string>
     <string name="Password">Contraseña </string>
