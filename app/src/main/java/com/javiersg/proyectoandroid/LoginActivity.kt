@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -24,6 +23,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        auth = FirebaseAuth.getInstance()
 
         loginEmail = findViewById(R.id.loginEmail)
         loginPassword = findViewById(R.id.loginPass)
@@ -40,19 +41,21 @@ class LoginActivity : AppCompatActivity() {
             val pass = loginPassword.text.toString()
 
             if (checkEmpty(mail, pass)) {
-                //EmailAuthProvider.getCredential(mail,pass) //posiblemente una versión actualizada
-                /*auth.signInWithEmailAndPassword(mail, pass)
-                    .addOnCompleteListener(this) { task -> //tarea asíncrona
-                        if (task.isSuccessful) {*/
+                Toast.makeText(applicationContext, "Al hacer click/tap", Toast.LENGTH_SHORT).show()
+                auth.signInWithEmailAndPassword(mail, pass)
+                    .addOnCompleteListener() { task -> //tarea asíncrona
+                        Toast.makeText(applicationContext, "después del auth", Toast.LENGTH_SHORT).show()
+                        if (task.isSuccessful) {
+    //7 clicks/taps 5 logueos exitosos, le toma: 02:08.46 para los primeros y 3 para el siguiente
+                            Toast.makeText(applicationContext, "Logueo exitoso", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
-                       /* } else {
+                        } else {
                             Toast.makeText(applicationContext, "Ingreso fallido", Toast.LENGTH_LONG).show()
                         }
-                    }*/
+                    }
             } else {
                 Toast.makeText(applicationContext, "Rellena ambos campos", Toast.LENGTH_SHORT).show()
-
             }
         }
 

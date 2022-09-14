@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthRegistrar
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -22,10 +21,12 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        auth = FirebaseAuth.getInstance()
         //auth = Firebase.auth //Esta declaración no funcionó
 
         registerEmail = findViewById(R.id.registerEmail)
@@ -35,40 +36,39 @@ class RegisterActivity : AppCompatActivity() {
         registerToLogin = findViewById(R.id.registerToLogin)
 
         //Acciones de botónes
-        registerToLogin.setOnClickListener{
+        registerToLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-        registerButton.setOnClickListener{
+        registerButton.setOnClickListener {
             val mail = registerEmail.text.toString()
             val pass = registerPassword.text.toString()
             val passRep = registerPassRep.text.toString()
 
-            if(passRep.equals(pass) && checkEmpty(mail, pass, passRep)){
-                //register(mail, pass)
-
-                /*auth.createUserWithEmailAndPassword(mail,pass)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {*/
+            if (checkEmpty(mail, pass, passRep)) {
+                auth.createUserWithEmailAndPassword(mail,pass)
+                    .addOnCompleteListener() { task ->
+                        if (task.isSuccessful) {
+    //15 clicks/taps 1 registro exitoso, le toma: entre 3 min y 4 registrar en firebase
+                            // y el cambio de activity appx 6
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
-                       /* }else {
-                            Toast.makeText(applicationContext, "Registro fallido", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(applicationContext,"Registro fallido",Toast.LENGTH_SHORT).show()
                         }
-                    }*/
-
-            }else {
-                Toast.makeText(applicationContext, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(applicationContext, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
+                }
             }
-        }
     }
 
     private fun checkEmpty(mail: String, pass: String, passRep: String): Boolean {
         return mail.isNotEmpty() && pass.isNotEmpty() && passRep.isNotEmpty()
     }
 /*
-    private fun register(mail: String, pass: String) {
-        auth.createUserWithEmailAndPassword(mail,pass)
+    private fun register(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener(this) {task -> //tarea asíncrona
                 if(task.isSuccessful){
                     //var i = Intent(this, DashboardActivity::class.java) //forma larga y nueva activity comentada

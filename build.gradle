@@ -6,7 +6,7 @@ Javier Suárez Guzmán
 buildscript {
     repositories {
         google()
-        jcenter()
+        //jcenter()
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.13'
