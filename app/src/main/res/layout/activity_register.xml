@@ -2,19 +2,22 @@
 <!-- /* Javier Suárez Guzmán
         Septiembre 2022 */ -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradient"
     tools:context=".RegisterActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/registerTitle"
-        android:textColor="@color/black"
+        android:textColor="@color/gris"
+        android:layout_marginTop="33dp"
         android:textAlignment="center"
         android:textSize="42sp"
         />
@@ -24,6 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="@string/Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/gris"
         android:inputType="textEmailAddress"
         android:textSize="28sp"
         />
@@ -33,6 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="@string/Password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/gris"
         android:inputType="textPassword"
         android:textSize="28sp"
         />
@@ -42,6 +49,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="@string/registerPassword"
+        android:textColorHint="@color/white"
+        android:textColor="@color/gris"
         android:inputType="textPassword"
         android:textSize="28sp"
         />
@@ -52,6 +61,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerButton"
+        android:scaleX="0.88"
         />
     <Button
         android:id="@+id/registerToLogin"
@@ -59,6 +69,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerToLoginButton"
+        android:scaleX="0.88"
         />
 
 </LinearLayout>

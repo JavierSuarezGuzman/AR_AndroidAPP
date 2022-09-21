@@ -9,13 +9,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
         android:text="@string/loginTitle"
-        android:textColor="@color/black"
+        android:textColor="@color/gris"
         android:textAlignment="center"
         android:textSize="42sp"
         />
@@ -25,6 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="@string/Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/gris"
         android:inputType="textEmailAddress"
         android:textSize="28sp"
         />
@@ -34,6 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="@string/Password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/gris"
         android:inputType="textPassword"
         android:textSize="28sp"
         />
@@ -44,6 +50,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/loginButton"
+        android:scaleX="0.88"
         />
     <Button
         android:id="@+id/loginToRegister"
@@ -51,6 +58,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerButton"
+        android:scaleX="0.88"
         />
 
 </LinearLayout>
