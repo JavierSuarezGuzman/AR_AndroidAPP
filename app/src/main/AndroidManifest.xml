@@ -42,10 +42,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".HelloGeoActivity"
+            android:name=".hellogeospatial.HelloGeoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="locked" />
 
         <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->

@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.javiersg.proyectoandroid.hellogeospatial.helpers.HelloGeoView;
+import com.javiersg.proyectoandroid.hellogeospatial.HelloGeoActivity;
 
 //import android.widget.ArrayAdapter;
 //import android.widget.Spinner;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Ar(View view) {
-        Intent i = new Intent(this, HelloGeoView.class);
+        Intent i = new Intent(this, HelloGeoActivity.class);
         startActivity(i);
     }
 
