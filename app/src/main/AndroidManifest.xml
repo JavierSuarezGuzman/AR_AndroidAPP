@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Javier Suárez Guzmán
-    Septiembre 2022 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.javiersg.proyectoandroid">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Limits app visibility in the Google Play Store to ARCore supported devices
-         (https://developers.google.com/ar/devices). -->
-    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <!--
+ Limits app visibility in the Google Play Store to ARCore supported devices
+         (https://developers.google.com/ar/devices).
+    -->
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +29,10 @@
         android:theme="@style/Theme.DroidKot"
         tools:targetApi="32">
 
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
@@ -45,19 +52,16 @@
             android:name=".hellogeospatial.HelloGeoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="locked" />
-
-        <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->
-        <meta-data android:name="com.google.ar.core" android:value="required" />
-
+            android:screenOrientation="locked" /> <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
         <meta-data
             android:name="com.google.android.ar.API_KEY"
-            android:value="AIzaSyDS7wWzMxT5oTa0VWunNZasxBFunqE-fP4"/>
-
+            android:value="AIzaSyDS7wWzMxT5oTa0VWunNZasxBFunqE-fP4" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDS7wWzMxT5oTa0VWunNZasxBFunqE-fP4" />
-
+            android:value="AIzaSyBTLa47Wee1M_34a547HS6_yXlaaRFAsWQ" />
     </application>
 
 </manifest>
