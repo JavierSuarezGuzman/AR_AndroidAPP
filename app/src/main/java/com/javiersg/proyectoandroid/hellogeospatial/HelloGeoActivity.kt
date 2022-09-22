@@ -90,10 +90,10 @@ class HelloGeoActivity : AppCompatActivity() {
 
   // Configure the session, setting the desired options according to your usecase.
   fun configureSession(session: Session) {
-    // DONE: Configure ARCore to use GeospatialMode.ENABLED.
+    // DONE: Configurar la sesión ARCore para usar la API geoespacial.
     session.configure(
       session.config.apply {
-        //Así se habilita el "modo Geoespacial"
+        // Así se habilita el "modo Geoespacial"
         geospatialMode = Config.GeospatialMode.ENABLED
       })
   }

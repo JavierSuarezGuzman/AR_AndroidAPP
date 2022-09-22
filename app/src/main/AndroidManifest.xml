@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- /* Javier Suárez Guzmán
+        Septiembre 2022 */ -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.javiersg.proyectoandroid">
@@ -52,7 +55,8 @@
             android:name=".hellogeospatial.HelloGeoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="locked" /> <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->
+            android:screenOrientation="locked" />
+        <!-- Indicates whether "Google Play Services for AR" (ARCore) is "required" or "optional". -->
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />

@@ -47,7 +47,7 @@ import java.io.IOException
 
 class HelloGeoRenderer(val activity: HelloGeoActivity) :
   SampleRender.Renderer, DefaultLifecycleObserver {
-  //<editor-fold desc="ARCore initialization" defaultstate="collapsed">
+  //<editor-fold desc="Inicialización de ARCore" defaultstate="collapsed">
   companion object {
     val TAG = "HelloGeoRenderer"
 
@@ -188,31 +188,31 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
     render.clear(virtualSceneFramebuffer, 0f, 0f, 0f, 0f)
     //</editor-fold>
 
-    // DONE: Obtain Geospatial information and display it on the map.
+    // DONE: Obtener información geoespacial y mostrar flecha en el mapa.
     val earth = session.earth
-    /* v the earth object's TrackingState is TRACKING, meaning that the position of earth is known. */
+    /* v Del objeto 'earth' su TrackingState es TRACKING, esto significa que la posición es conocida. */
     if (earth?.trackingState == TrackingState.TRACKING
         && earth.earthState == Earth.EarthState.ENABLED){ //https://developers.google.com/ar/reference/java/com/google/ar/core/Earth.EarthState
-      // DONE: the Earth object may be used here.
+      // DONE: El objeto earth se debe usar aquí:
       //aquí se le solicita al ARCore que entregue los datos "geoespaciales"
       val cameraGeoSpatialPose = earth.cameraGeospatialPose
-
-      /* ^ This gives you a GeospatialPose that contains this information:
+      /* ^ Esto entrega la "GeospatialPose" que contiene la siguiente información:
     -Location, expressed in latitude and longitude. An estimate of the location accuracy is also supplied.
     -Elevation, and an estimate of elevation accuracy.
     -Heading, an approximation of the direction the device is facing, and an estimate of the accuracy of the heading.*/
-      // v Display positioning information on the map
+      // Display positioning information on the map
       activity.view.mapView?.updateMapPosition(
         latitude = cameraGeoSpatialPose.latitude,
         longitude = cameraGeoSpatialPose.longitude,
         heading = cameraGeoSpatialPose.heading
       )
     }
+    /* Mostrar datos en pantalla
     // v Esta línea debería poder mostrar en pantalla el estado de información de la ubicación
     //activity.view.updateStatusText(earth, earth.cameraGeospatialPose)
-    // ^ Pero falla y aún no entiendo por qué
+    // ^ Pero falla y aún no entiendo por qué*/
 
-    // Draw the placed anchor, if it exists.
+    // Mostrar un "ancla" o anchor si existe.
     earthAnchor?.let {
       render.renderCompassAtAnchor(it)
     }
@@ -224,13 +224,13 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
   var earthAnchor: Anchor? = null
 
   fun onMapClick(latLng: LatLng) {
-    // DONE: place an anchor at the given position.
+    // DONE: Ubicar un anchor en la posición pinchada.
     val earth = session?.earth ?: return
     if (earth.trackingState != TrackingState.TRACKING) {
       return
     }
     earthAnchor?.detach()
-    // Place the earth anchor at the same altitude as that of the camera to make it easier to view.
+    // Se posiciona la ancla en una altitud menor para poder verla sin problemas.
     val altitude = earth.cameraGeospatialPose.altitude - 22.3
     // The rotation quaternion of the anchor in the East-Up-South (EUS) coordinate system.
     val qx = 0f
@@ -239,7 +239,7 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
     val qw = 1f
     earthAnchor = earth.createAnchor(latLng.latitude, latLng.longitude, altitude, qx, qy, qz, qw)
 
-    //Show the placed marker on the map
+    // Mostrar la marca en el mapa
     activity.view.mapView?.earthMarker?.apply {
       position = latLng
       isVisible = true
@@ -247,6 +247,7 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
   }
 
   private fun SampleRender.renderCompassAtAnchor(anchor: Anchor) {
+    // Renderizar el .obj en pantalla cuando este es actualizado en la función anterior
     // Get the current pose of the Anchor in world space. The Anchor pose is updated
     // during calls to session.update() as ARCore refines its estimate of the world.
     anchor.pose.toMatrix(modelMatrix, 0)

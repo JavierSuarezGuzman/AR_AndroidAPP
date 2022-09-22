@@ -5,13 +5,16 @@
       <map>
         <entry key="..\:/Pega/ACL/Android/doidKot/app/src/main/res/layout/activity_main.xml" value="0.26902173913043476" />
         <entry key="..\:/Pega/ACL/Android/doidKot/app/src/main/res/layout/activity_register.xml" value="0.26902173913043476" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/drawable/gradient.xml" value="0.156" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/drawable/gradientday.xml" value="0.156" />
         <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3645" />
-        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_ar.xml" value="0.1" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_ar.xml" value="0.19086826347305388" />
         <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_login.xml" value="0.26902173913043476" />
-        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_main.xml" value="0.26902173913043476" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_main.xml" value="0.3197463768115942" />
         <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_maps.xml" value="0.24728260869565216" />
         <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_ra.xml" value="0.20742753623188406" />
-        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_register.xml" value="0.26902173913043476" />
+        <entry key="..\:/Pega/ACL/Android/droidKot/app/src/main/res/layout/activity_register.xml" value="0.40520833333333334" />
       </map>
     </option>
   </component>
