@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.javiersg.proyectoandroid.hellogeospatial.helpers.HelloGeoView;
+
 //import android.widget.ArrayAdapter;
 //import android.widget.Spinner;
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //sp1 = (Spinner)findViewById(R.id.spinner);
         //btn1 = (Button)findViewById(R.id.id_btn1);
         /*
-        String [] valores = {"1. Australia","2. Dos", "3. Tres"};
+        String [] valores = {"1. Australia","2. Argentina", "3. Chile", "4. Venezuela"};
 
         ArrayAdapter <String> adaptador = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, valores);
         sp1.setAdapter(adaptador);
@@ -36,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    /*public void Ar(View view) {
-        Intent i = new Intent(this, ArActivity.class);
+    public void Ar(View view) {
+        Intent i = new Intent(this, HelloGeoView.class);
         startActivity(i);
-    }*/
+    }
 
 
 }
