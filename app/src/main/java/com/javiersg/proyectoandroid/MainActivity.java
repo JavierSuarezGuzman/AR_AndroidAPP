@@ -36,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    /*public void Ar(View view) {
+        Intent i = new Intent(this, ArActivity.class);
+        startActivity(i);
+    }*/
+
 
 }
