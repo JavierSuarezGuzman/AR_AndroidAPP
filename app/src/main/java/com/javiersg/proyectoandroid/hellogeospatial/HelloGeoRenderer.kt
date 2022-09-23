@@ -224,7 +224,7 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
   var earthAnchor: Anchor? = null
 
   fun onMapClick(latLng: LatLng) {
-    // DONE: Ubicar un anchor en la posición pinchada.
+    // DONE: Ubicar un anchor/ancla en la posición pinchada.
     val earth = session?.earth ?: return
     if (earth.trackingState != TrackingState.TRACKING) {
       return

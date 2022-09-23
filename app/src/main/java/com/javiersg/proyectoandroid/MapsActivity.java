@@ -27,13 +27,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        // Obtiene el SupportMapFragment del layout.xml
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
     /**
+     * Cuando el mapa está disponible, lo utiliza
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
      * This is where we can add markers or lines, add listeners or move the camera. In this case,
@@ -48,6 +49,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Marcador en Santiago, Chile
         LatLng santiago = new LatLng(-33.45, -70.666);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID); //Se cambia a vista híbrida = 4
+        //GoogleMap.MAP_TYPE_SATELLITE = 2
+        //GoogleMap.MAP_TYPE_TERRAIN = 3
         mMap.addMarker(new MarkerOptions().position(santiago).title("Marca en Santiago"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(santiago));
     }
