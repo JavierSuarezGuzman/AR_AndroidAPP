@@ -16,11 +16,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
+        android:fontFamily="@font/quantico"
         android:text="@string/loginTitle"
-        android:textColor="@color/gris"
         android:textAlignment="center"
-        android:textSize="42sp"
-        />
+        android:textColor="@color/gris"
+        android:textSize="42sp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:contentDescription="Logo"
+        app:srcCompat="@drawable/earth" />
 
     <EditText
         android:id="@+id/loginEmail"
@@ -30,7 +37,9 @@
         android:textColorHint="@color/white"
         android:textColor="@color/gris"
         android:inputType="textEmailAddress"
-        android:textSize="28sp"
+        android:shadowColor="@color/azul"
+        android:textSize="24sp"
+        android:scaleX="0.98"
         />
 
     <EditText
@@ -41,7 +50,9 @@
         android:textColorHint="@color/white"
         android:textColor="@color/gris"
         android:inputType="textPassword"
-        android:textSize="28sp"
+        android:shadowColor="@color/azul"
+        android:textSize="24sp"
+        android:scaleX="0.98"
         />
 
     <Button
@@ -50,7 +61,9 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/loginButton"
-        android:scaleX="0.88"
+        android:backgroundTint="@color/azul"
+        android:textColor="@color/noche"
+        android:scaleX="0.95"
         />
     <Button
         android:id="@+id/loginToRegister"
@@ -58,7 +71,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerButton"
-        android:scaleX="0.88"
+        android:scaleX="0.95"
         />
 
 </LinearLayout>

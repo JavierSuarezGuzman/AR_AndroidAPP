@@ -9,8 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="cefa">#87CEFA</color>
+    <color name="azul">#3399ff</color>
     <color name="noche">#091133</color>
     <color name="gris">#889399</color>
-    <color name="mdr">#B3FFFE</color>
+    <color name="mdr">#3399ff</color>
 
 </resources>

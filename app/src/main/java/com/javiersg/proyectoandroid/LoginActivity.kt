@@ -41,13 +41,13 @@ class LoginActivity : AppCompatActivity() {
             val pass = loginPassword.text.toString()
 
             if (checkEmpty(mail, pass)) {
-                Toast.makeText(applicationContext, "Al hacer click/tap", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Al hacer click/tap", Toast.LENGTH_SHORT).show()
                 auth.signInWithEmailAndPassword(mail, pass)
                     .addOnCompleteListener() { task -> //tarea asíncrona
-                        Toast.makeText(applicationContext, "después del auth", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext, "después del auth", Toast.LENGTH_SHORT).show()
                         if (task.isSuccessful) {
     //7 clicks/taps 5 logueos exitosos, le toma: 02:08.46 para los primeros y 3 para el siguiente
-                            Toast.makeText(applicationContext, "Login exitoso", Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(applicationContext, "Login exitoso", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
                         } else {

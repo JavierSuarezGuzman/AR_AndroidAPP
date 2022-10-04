@@ -105,14 +105,14 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
           Texture.ColorFormat.SRGB
         )
 
-      virtualObjectMesh = Mesh.createFromAsset(render, "models/geospatial_marker.obj");
+      virtualObjectMesh = Mesh.createFromAsset(render, "models/pointer.obj");
       virtualObjectShader =
         Shader.createFromAssets(
           render,
           "shaders/ar_unlit_object.vert",
           "shaders/ar_unlit_object.frag",
           /*defines=*/ null)
-          .setTexture("u_Texture", virtualObjectTexture)
+          //.setTexture("u_Texture", virtualObjectTexture)
 
       backgroundRenderer.setUseDepthVisualization(render, false)
       backgroundRenderer.setUseOcclusion(render, false)
@@ -231,7 +231,7 @@ class HelloGeoRenderer(val activity: HelloGeoActivity) :
     }
     earthAnchor?.detach()
     // Se posiciona la ancla en una altitud menor para poder verla sin problemas.
-    val altitude = earth.cameraGeospatialPose.altitude - 22.3
+    val altitude = earth.cameraGeospatialPose.altitude - 32.3
     // The rotation quaternion of the anchor in the East-Up-South (EUS) coordinate system.
     val qx = 0f
     val qy = 0f

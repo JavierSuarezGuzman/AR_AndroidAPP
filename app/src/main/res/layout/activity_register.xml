@@ -15,12 +15,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/quantico"
         android:text="@string/registerTitle"
         android:textColor="@color/gris"
         android:layout_marginTop="33dp"
         android:textAlignment="center"
         android:textSize="42sp"
         />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:contentDescription="Logo"
+        app:srcCompat="@drawable/earth" />
+
+
 
     <EditText
         android:id="@+id/registerEmail"
@@ -61,7 +71,9 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerButton"
-        android:scaleX="0.88"
+        android:backgroundTint="@color/azul"
+        android:textColor="@color/noche"
+        android:scaleX="0.95"
         />
     <Button
         android:id="@+id/registerToLogin"
@@ -69,7 +81,7 @@
         android:layout_height="56dp"
         android:textSize="20sp"
         android:text="@string/registerToLoginButton"
-        android:scaleX="0.88"
+        android:scaleX="0.95"
         />
 
 </LinearLayout>
