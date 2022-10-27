@@ -1,3 +1,6 @@
+/* Javier Suárez Guzmán
+        Octubre 2022 */
+
 package com.javiersg.proyectoandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +12,7 @@ import java.util.TimerTask;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private int DELAY_SPLASH = 5000; //estos son 10 segundos
+    private int DELAY_SPLASH = 5000; //estos son 5 segundos
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
