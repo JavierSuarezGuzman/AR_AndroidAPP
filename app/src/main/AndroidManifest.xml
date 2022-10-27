@@ -69,10 +69,10 @@
         <!-- API Key con servicios desactivadas en este momento -->
         <meta-data
             android:name="com.google.android.ar.API_KEY"
-            android:value="AIzaSyDS7wWzMxT5oTa0VWunNZasxBFunqE-fP4" />
+            android:value="Añadir una API válida" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDS7wWzMxT5oTa0VWunNZasxBFunqE-fP4" />
+            android:value="Añadir una API válida" />
     </application>
 
 </manifest>
